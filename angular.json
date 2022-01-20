@@ -3,5 +3,37 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "theme-tabler": {
+      "projectType": "library",
+      "root": "projects/theme-tabler",
+      "sourceRoot": "projects/theme-tabler/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/theme-tabler/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/theme-tabler/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/theme-tabler/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/theme-tabler/src/test.ts",
+            "tsConfig": "projects/theme-tabler/tsconfig.spec.json",
+            "karmaConfig": "projects/theme-tabler/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "theme-tabler"
 }
