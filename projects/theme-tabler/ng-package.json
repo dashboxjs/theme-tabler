@@ -3,5 +3,10 @@
   "dest": "../../dist/theme-tabler",
   "lib": {
     "entryFile": "src/public-api.ts"
-  }
+  },
+  "allowedNonPeerDependencies": [
+    "@dashbox/common",
+    "@dashbox/core",
+    "@tabler/core"
+  ]
 }

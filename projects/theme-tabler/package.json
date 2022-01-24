@@ -6,6 +6,9 @@
     "@angular/core": "^13.1.0"
   },
   "dependencies": {
+    "@dashbox/common": "~1.0.0",
+    "@dashbox/core": "~1.0.0",
+    "@tabler/core": "^1.0.0-beta6",
     "tslib": "^2.3.0"
   }
 }

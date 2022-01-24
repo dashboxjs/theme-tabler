@@ -1,10 +1,14 @@
 {
-  "name": "dashbox-theme-tabler",
+  "name": "@dashbox/theme-tabler",
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "link:all": "yarn link:common && yarn link:core",
+    "link:common": "yarn link @dashbox/common",
+    "link:core": "yarn link @dashbox/core",
+    "link:self": "yarn --cwd dist/theme-tabler link",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -18,6 +22,9 @@
     "@angular/platform-browser": "~13.1.0",
     "@angular/platform-browser-dynamic": "~13.1.0",
     "@angular/router": "~13.1.0",
+    "@dashbox/common": "~1.0.0",
+    "@dashbox/core": "~1.0.0",
+    "@tabler/core": "^1.0.0-beta6",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
