@@ -1,15 +1,19 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { ThemeDefinition } from '@dashbox/common';
 import { DxThemeModule } from '@dashbox/core';
 import { ButtonComponent } from './gizmos/actions/button/button.component';
+import { LayoutDashboardComponent } from './gizmos/layouts/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
-    ButtonComponent
+    ButtonComponent,
+    LayoutDashboardComponent
   ],
   imports: [
-  ],
-  exports: [
+    CommonModule,
+    RouterModule
   ]
 })
 export class DxThemeTablerModule extends DxThemeModule {
@@ -19,7 +23,10 @@ export class DxThemeTablerModule extends DxThemeModule {
     version: '1.0.0',
     gizmos: {
       // Actions
-      button: ButtonComponent
+      button: ButtonComponent,
+
+      // Layouts
+      'layout-dashboard': LayoutDashboardComponent
     }
   }
 

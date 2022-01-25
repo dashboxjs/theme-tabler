@@ -3,7 +3,7 @@ import { DxGizmoButtonConfig, GizmoDefinition } from '@dashbox/common';
 import { DxThemeGizmoComponent } from '@dashbox/core';
 
 @Component({
-  selector: 'lib-button',
+  selector: 'tabler-button',
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss']
 })
