@@ -1,16 +1,20 @@
-import { Component } from '@angular/core';
-import { DxGizmoButtonConfig, GizmoDefinition } from '@dashbox/common';
-import { DxThemeGizmoComponent } from '@dashbox/core';
+import { Component, Input } from '@angular/core';
+import { DxGizmoButtonConfig } from '@dashbox/common';
+import { DxGizmo } from '@dashbox/core';
 
 @Component({
   selector: 'tabler-button',
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss']
 })
-export class ButtonComponent extends DxThemeGizmoComponent<DxGizmoButtonConfig> {
+@DxGizmo({
+  name: 'Button',
+  type: 'button',
+  category: 'action',
+  commonlyUsed: true
+})
+export class ButtonComponent {
 
-  definition: GizmoDefinition = {
-    name: 'Button'
-  }
+  @Input() config!: DxGizmoButtonConfig
 
 }
