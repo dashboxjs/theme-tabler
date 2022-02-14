@@ -1,0 +1,52 @@
+{
+    "gizmos": {
+        "button": {
+            "name": "Button",
+            "options": {
+                "label": "Label",
+                "type": "Type",
+                "types": {
+                    "btn": "Standard",
+                    "btn-outline": "Outline",
+                    "btn-ghost": "Ghost"
+                },
+                "color": "Color",
+                "shape": "Shape",
+                "shapes": {
+                    "standard": "Standard",
+                    "square": "Square",
+                    "pill": "Pill"
+                }
+            },
+            "outputs": {
+                "click": "On Click"
+            }
+        },
+        "text": {
+            "name": "Text",
+            "options": {
+                "text": "Text",
+                "color": "Color"
+            }
+        }
+    },
+    "groups": {
+        "basic": "Basic",
+        "appearance": "Appearance"
+    },
+    "colors": {
+        "none": "None",
+        "blue": "Blue / Primary",
+        "azure": "Azure / Info",
+        "green": "Green / Success",
+        "orange": "Orange / Warning",
+        "red": "Red (Danger)",
+        "indigo": "Indigo",
+        "purple": "Purple",
+        "pink": "Pink",
+        "yellow": "Yellow",
+        "lime": "Lime",
+        "teal": "Teal",
+        "cyan": "Cyan"
+    }
+}

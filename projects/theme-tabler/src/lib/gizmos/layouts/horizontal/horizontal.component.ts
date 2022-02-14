@@ -8,8 +8,9 @@ import { DxGizmo } from '@dashbox/core';
 })
 @DxGizmo({
   type: 'layout-horizontal',
-  name: 'Horizontal',
-  category: 'layout'
+  nameTranslation: 'Horizontal',
+  category: 'layout',
+  layout: true
 })
 export class LayoutHorizontalComponent {
 

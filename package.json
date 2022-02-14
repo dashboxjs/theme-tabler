@@ -24,6 +24,7 @@
     "@angular/router": "~13.1.0",
     "@dashbox/common": "~1.0.0",
     "@dashbox/core": "~1.0.0",
+    "@ngx-translate/core": "^14.0.0",
     "@tabler/core": "^1.0.0-beta6",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",
