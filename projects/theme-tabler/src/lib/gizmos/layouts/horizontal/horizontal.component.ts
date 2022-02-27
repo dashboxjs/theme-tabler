@@ -4,14 +4,12 @@ import { DxGizmo } from '@dashbox/core';
 @Component({
   selector: 'tabler-layout-horizontal',
   templateUrl: './horizontal.component.html',
-  styleUrls: ['./horizontal.component.scss']
+  styleUrls: ['./horizontal.component.scss'],
 })
 @DxGizmo({
   type: 'layout-horizontal',
   nameTranslation: 'Horizontal',
   category: 'layout',
-  layout: true
+  layout: true,
 })
-export class LayoutHorizontalComponent {
-
-}
+export class LayoutHorizontalComponent {}

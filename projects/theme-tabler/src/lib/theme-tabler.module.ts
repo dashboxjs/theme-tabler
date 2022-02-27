@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { DxCommonModule } from '@dashbox/core';
 import { DxTheme } from '@dashbox/core';
-import { TranslateModule } from '@ngx-translate/core'
+import { TranslateModule } from '@ngx-translate/core';
+
 import { ContainerComponent } from './container/container.component';
 import { ButtonComponent } from './gizmos/actions/button/button.component';
 import { TextComponent } from './gizmos/data-displays/text/text.component';
@@ -17,27 +18,22 @@ const gizmos = [
   TextComponent,
 
   // Layouts
-  LayoutHorizontalComponent
-]
+  LayoutHorizontalComponent,
+];
 
 @NgModule({
-  declarations: [
-    ContainerComponent,
-    ...gizmos
-  ],
+  declarations: [ContainerComponent, ...gizmos],
   imports: [
     CommonModule,
     RouterModule,
     DxCommonModule,
-    TranslateModule.forChild()
-  ]
+    TranslateModule.forChild(),
+  ],
 })
 @DxTheme({
   name: 'Tabler',
   version: '1.0.0',
   container: ContainerComponent,
-  gizmos
+  gizmos,
 })
-export class DxThemeTablerModule {
-
-}
+export class DxThemeTablerModule {}

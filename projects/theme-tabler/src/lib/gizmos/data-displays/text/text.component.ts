@@ -1,15 +1,20 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { DxGizmoConfig, DxOptionMarkdownDefinition, DxOptionSelectDefinition, DxOptionTextDefinition } from '@dashbox/common';
+import { Component, Input } from '@angular/core';
+import {
+  DxGizmoConfig,
+  DxOptionMarkdownDefinition,
+  DxOptionSelectDefinition,
+} from '@dashbox/common';
 import { DxGizmo } from '@dashbox/core';
+
 import { BASE_COLORS } from '../../../data/colors.data';
 import { TextConfig } from './text.interfaces';
 
-const TRANSLATION = '@theme.gizmos.text'
+const TRANSLATION = '@theme.gizmos.text';
 
 @Component({
   selector: 'tabler-text',
   templateUrl: './text.component.html',
-  styleUrls: ['./text.component.scss']
+  styleUrls: ['./text.component.scss'],
 })
 @DxGizmo({
   nameTranslation: `${TRANSLATION}.name`,
@@ -20,19 +25,19 @@ const TRANSLATION = '@theme.gizmos.text'
     {
       nameTranslation: '@theme.groups.basic',
       options: [
-        <DxOptionMarkdownDefinition> {
+        <DxOptionMarkdownDefinition>{
           key: 'text',
           type: 'markdown',
           nameTranslation: `${TRANSLATION}.options.text`,
           defaultValue: 'Text',
-          overridable: true
+          overridable: true,
         },
-      ]
+      ],
     },
     {
       nameTranslation: '@theme.groups.appearance',
       options: [
-        <DxOptionSelectDefinition> {
+        <DxOptionSelectDefinition>{
           key: 'color',
           type: 'select',
           nameTranslation: `${TRANSLATION}.options.color`,
@@ -40,8 +45,8 @@ const TRANSLATION = '@theme.gizmos.text'
           overridable: true,
           values: ['none', ...BASE_COLORS].map((color) => ({
             value: color,
-            labelTranslation: `@theme.colors.${color}`
-          }))
+            labelTranslation: `@theme.colors.${color}`,
+          })),
         },
         // <DxOptionSelectDefinition> {
         //   key: 'type',
@@ -63,12 +68,10 @@ const TRANSLATION = '@theme.gizmos.text'
         //     labelTranslation: `${TRANSLATION}.options.shapes.${shape}`
         //   }))
         // }
-      ]
-    }
-  ]
+      ],
+    },
+  ],
 })
 export class TextComponent {
-
-  @Input() config!: DxGizmoConfig<TextConfig>
-
+  @Input() config!: DxGizmoConfig<TextConfig>;
 }

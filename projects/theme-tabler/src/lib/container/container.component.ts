@@ -4,8 +4,6 @@ import { Component, ViewEncapsulation } from '@angular/core';
   selector: 'tabler-container',
   templateUrl: './container.component.html',
   styleUrls: ['../styles/styles.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
 })
-export class ContainerComponent {
-
-}
+export class ContainerComponent {}

@@ -1,10 +1,10 @@
-import { BASE_COLORS } from "../../../data/colors.data";
+import { BASE_COLORS } from '../../../data/colors.data';
 
 export interface TextConfig {
-    text: string
-    // type: typeof BUTTON_TYPES[number]
-    color: typeof BASE_COLORS[number]
-    // shape: typeof BUTTON_SHAPES[number]
+  text: string;
+  // type: typeof BUTTON_TYPES[number]
+  color: typeof BASE_COLORS[number];
+  // shape: typeof BUTTON_SHAPES[number]
 }
 
 // export const BUTTON_TYPES = [
