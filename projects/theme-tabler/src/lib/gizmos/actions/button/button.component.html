@@ -1,6 +1,6 @@
 <button
     type="button"
-    (click)="click.emit()"
+    (click)="buttonClick.emit()"
     [class]="'btn ' + config.options.type + '-' + config.options.color + ' btn-' + config.options.shape">
     {{config.options.label}}
 </button>

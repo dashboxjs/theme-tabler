@@ -1,0 +1,56 @@
+<ng-container *ngIf="!dismissed">
+    <div
+        [class]="'alert alert-' + config.options.type"
+        [class.alert-important]="config.options.isImportant"
+        role="alert">
+        <div class="content">
+            <!-- Icon -->
+            <div
+                *ngIf="config.options.hasIcon"
+                [class]="'icon text-' + (config.options.isImportant ? 'white' : config.options.type)">
+                <i-tabler [name]="iconName"></i-tabler>
+            </div>
+
+            <div>
+                <!-- Title -->
+                <h4 class="alert-title" [class.text-white]="config.options.isImportant">
+                    {{ config.options.title }}
+                </h4>
+
+                <!-- Message -->
+                <div
+                    *ngIf="config.options.message"
+                    [class]="'text-' + (config.options.isImportant ? 'white' : 'muted')"
+                    [dxMarkdown]="config.options.message"></div>
+
+                <!-- Buttons -->
+                <div class="btn-list" *ngIf="config.options.primaryButtonLabel || config.options.secondaryButtonLabel">
+                    <button
+                        type="button"
+                        *ngIf="config.options.primaryButtonLabel"
+                        [class]="'btn ' + (config.options.isImportant ? 'text-black' : 'btn-' + config.options.type)"
+                        (click)="primaryButtonClick.emit()">
+                        {{ config.options.primaryButtonLabel }}
+                    </button>
+                    <button
+                        type="button"
+                        *ngIf="config.options.secondaryButtonLabel"
+                        class="btn"
+                        [class.text-muted]="config.options.isImportant"
+                        (click)="secondaryButtonClick.emit()">
+                        {{ config.options.secondaryButtonLabel }}
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dismiss "X" -->
+        <a
+            *ngIf="config.options.isDismissible"
+            aria-label="close"
+            [class]="'dismiss-btn text-' + (config.options.isImportant ? 'white' : 'muted')"
+            (click)="onDismiss()">
+            <i-tabler name="x"></i-tabler>
+        </a>
+    </div>    
+</ng-container>

@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
     "build": "ng build",
     "link:all": "yarn link:common && yarn link:core",
     "link:common": "yarn link @dashbox/common",
@@ -27,6 +26,7 @@
     "@dashbox/core": "~1.0.0",
     "@ngx-translate/core": "^14.0.0",
     "@tabler/core": "^1.0.0-beta6",
+    "angular-tabler-icons": "^1.54.0",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

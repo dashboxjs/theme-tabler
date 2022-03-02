@@ -2,6 +2,7 @@
     "gizmos": {
         "button": {
             "name": "Button",
+            "searchString": "actions buttons butns btns clicks",
             "options": {
                 "label": "Label",
                 "type": "Type",
@@ -19,20 +20,44 @@
                 }
             },
             "outputs": {
-                "click": "On Click"
+                "click": "Click"
             }
         },
         "text": {
             "name": "Text",
+            "searchString": "text txt title h1 h2 h3 h4 h5 h6 description message msg md markdown",
             "options": {
                 "text": "Text",
                 "color": "Color"
+            }
+        },
+        "alert": {
+            "name": "Alert",
+            "searchString": "alert msg message notif",
+            "options": {
+                "type": "Type",
+                "title": "Title",
+                "message": "Message",
+                "hasIcon": "Display Icon",
+                "isImportant": "Important Alert",
+                "isDismissible": "Dismissible Alert",
+                "primaryButtonLabel": "Primary Button",
+                "secondaryButtonLabel": "Secondary Button"
+            },
+            "inputs": {
+                "dismissed": "Dismissed"
+            },
+            "outputs": {
+                "primaryButtonClick": "Primary Button Click",
+                "secondaryButtonClick": "Secondary Button Click",
+                "dismiss": "Dismiss"
             }
         }
     },
     "groups": {
         "basic": "Basic",
-        "appearance": "Appearance"
+        "appearance": "Appearance",
+        "interactions": "Interactions"
     },
     "colors": {
         "none": "None",
@@ -48,5 +73,11 @@
         "lime": "Lime",
         "teal": "Teal",
         "cyan": "Cyan"
+    },
+    "states": {
+        "info": "Info",
+        "success": "Success",
+        "warning": "Warning",
+        "danger": "Danger"
     }
 }

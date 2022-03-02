@@ -18,8 +18,10 @@ const TRANSLATION = '@theme.gizmos.button';
 })
 @DxGizmo({
   nameTranslation: `${TRANSLATION}.name`,
+  searchStringTranslation: `${TRANSLATION}.searchString`,
   type: 'button',
   category: 'action',
+  icon: 'click',
   commonlyUsed: true,
   options: [
     {

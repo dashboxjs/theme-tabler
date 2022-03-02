@@ -9,6 +9,7 @@
     "@dashbox/common",
     "@dashbox/core",
     "@ngx-translate/core",
-    "@tabler/core"
+    "@tabler/core",
+    "angular-tabler-icons"
   ]
 }

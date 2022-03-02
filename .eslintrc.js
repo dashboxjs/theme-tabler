@@ -37,6 +37,7 @@ module.exports = {
         'simple-import-sort/exports': 'error',
         '@typescript-eslint/dot-notation': 'off',
         '@typescript-eslint/no-loop-func': 'off',
+        '@typescript-eslint/no-use-before-define': ["error", { "functions": false, "classes": true, "variables": false }],
         'no-warning-comments': ['error', { "terms": ["fixme"], "location": "start" }],
         '@typescript-eslint/explicit-member-accessibility': [
           'error',

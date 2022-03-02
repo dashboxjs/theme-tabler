@@ -18,8 +18,10 @@ const TRANSLATION = '@theme.gizmos.text';
 })
 @DxGizmo({
   nameTranslation: `${TRANSLATION}.name`,
+  searchStringTranslation: `${TRANSLATION}.searchString`,
   type: 'text',
   category: 'dataDisplay',
+  icon: 'language',
   commonlyUsed: true,
   options: [
     {

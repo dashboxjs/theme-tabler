@@ -1,1 +1,6 @@
-@import "./tabler.min.scss"
+@import "./tabler.min.scss";
+
+/* No margin for the last paragraph of markdown directive */
+*[ng-reflect-dx-markdown] > p:last-child {
+  margin-bottom: 0;
+}

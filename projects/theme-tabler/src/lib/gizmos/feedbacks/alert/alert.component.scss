@@ -1,0 +1,23 @@
+.btn-list {
+  margin-top: 1rem;
+}
+
+.alert {
+  display: flex;
+  justify-content: space-between;
+
+  & > .content {
+    display: flex;
+
+    & > .icon {
+      margin-top: -5px;
+      margin-right: 1rem;
+    }
+  }
+
+  & .dismiss-btn i-tabler {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+}
