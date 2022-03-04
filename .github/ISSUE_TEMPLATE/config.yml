@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Feature Request
+    url: https://github.com/dashboxjs/theme-tabler/discussions/new?category=ideas
+    about: Share your ideas on how to make Dashbox Theme Tabler better.
+  - name: Dashbox Community Support
+    url: https://chat.dashbox.dev/
+    about: Please ask and answer questions here.
