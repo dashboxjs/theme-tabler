@@ -1,1 +1,4 @@
-<div [class]="'text-' + config.options.color" [dxMarkdown]="config.options.text"></div>
+<div
+  [class]="'text-' + config.options.color"
+  [style.text-align]="config.options.align"
+  [dxMarkdown]="config.options.text"></div>

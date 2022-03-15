@@ -2,15 +2,8 @@ import { BASE_COLORS } from '../../../data/colors.data';
 
 export interface TextConfig {
   text: string;
-  // type: typeof BUTTON_TYPES[number]
   color: typeof BASE_COLORS[number];
-  // shape: typeof BUTTON_SHAPES[number]
+  align: typeof TEXT_ALIGNS[number];
 }
 
-// export const BUTTON_TYPES = [
-//     "btn", "btn-outline", "btn-ghost"
-// ] as const
-
-// export const BUTTON_SHAPES = [
-//     "standard", "square", "pill"
-// ] as const
+export const TEXT_ALIGNS = ['left', 'center', 'right'] as const;

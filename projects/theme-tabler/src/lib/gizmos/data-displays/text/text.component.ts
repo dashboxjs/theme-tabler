@@ -7,7 +7,7 @@ import {
 import { DxGizmo } from '@dashbox/core';
 
 import { BASE_COLORS } from '../../../data/colors.data';
-import { TextConfig } from './text.interfaces';
+import { TEXT_ALIGNS, TextConfig } from './text.interfaces';
 
 const TRANSLATION = '@theme.gizmos.text';
 
@@ -33,6 +33,7 @@ const TRANSLATION = '@theme.gizmos.text';
           nameTranslation: `${TRANSLATION}.options.text`,
           defaultValue: 'Text',
           overridable: true,
+          required: true,
         },
       ],
     },
@@ -45,31 +46,23 @@ const TRANSLATION = '@theme.gizmos.text';
           nameTranslation: `${TRANSLATION}.options.color`,
           defaultValue: 'none',
           overridable: true,
+          required: true,
           values: ['none', ...BASE_COLORS].map((color) => ({
             value: color,
             labelTranslation: `@theme.colors.${color}`,
           })),
         },
-        // <DxOptionSelectDefinition> {
-        //   key: 'type',
-        //   type: 'select',
-        //   nameTranslation: `${TRANSLATION}.options.type`,
-        //   defaultValue: 'btn',
-        //   values: BUTTON_TYPES.map((type) => ({
-        //     value: type,
-        //     labelTranslation: `${TRANSLATION}.options.types.${type}`
-        //   }))
-        // },
-        // <DxOptionSelectDefinition> {
-        //   key: 'shape',
-        //   type: 'select',
-        //   nameTranslation: `${TRANSLATION}.options.shape`,
-        //   defaultValue: 'standard',
-        //   values: BUTTON_SHAPES.map((shape) => ({
-        //     value: shape,
-        //     labelTranslation: `${TRANSLATION}.options.shapes.${shape}`
-        //   }))
-        // }
+        <DxOptionSelectDefinition>{
+          key: 'align',
+          type: 'select',
+          nameTranslation: `${TRANSLATION}.options.align`,
+          defaultValue: 'left',
+          required: true,
+          values: TEXT_ALIGNS.map((align) => ({
+            value: align,
+            labelTranslation: `@theme.directions.${align}`,
+          })),
+        },
       ],
     },
   ],

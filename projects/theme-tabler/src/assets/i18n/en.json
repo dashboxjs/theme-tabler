@@ -28,7 +28,8 @@
             "searchString": "text txt title h1 h2 h3 h4 h5 h6 description message msg md markdown",
             "options": {
                 "text": "Text",
-                "color": "Color"
+                "color": "Color",
+                "align": "Alignment"
             }
         },
         "alert": {
@@ -79,5 +80,10 @@
         "success": "Success",
         "warning": "Warning",
         "danger": "Danger"
+    },
+    "directions": {
+        "left": "Left",
+        "center": "Center",
+        "right": "Right"
     }
 }

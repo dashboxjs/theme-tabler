@@ -54,7 +54,7 @@ Below are listed all the planned Gizmos for this theme. Feel free to [open a dis
 
 | Gizmo       | Priority | Target Version |
 |-------------|----------|----------------|
-| Text        | 1        |                |
+| Text        | 1        | 0.0.2          |
 | Data Table  | 1        |                |
 | Badge / Tag | 2        |                |
 | Card        | 2        |                |
