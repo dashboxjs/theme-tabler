@@ -1,6 +1,6 @@
 {
   "name": "@dashbox/theme-tabler",
-  "version": "0.0.2",
+  "version": "14.0.0",
   "keywords": [
     "angular",
     "application",
@@ -15,15 +15,15 @@
   ],
   "license": "GPL-3.0",
   "peerDependencies": {
-    "@angular/common": "^13.1.0",
-    "@angular/core": "^13.1.0"
+    "@angular/common": "13 - 14",
+    "@angular/core": "13 - 14"
   },
   "dependencies": {
-    "@dashbox/common": "~0.0.2",
-    "@dashbox/core": "~0.0.4",
+    "@dashbox/common": "^14.0.0",
+    "@dashbox/core": "^14.0.0",
     "@ngx-translate/core": "^14.0.0",
     "@tabler/core": "^1.0.0-beta6",
-    "angular-tabler-icons": "^1.54.0",
+    "angular-tabler-icons": "^1.112.0",
     "tslib": "^2.3.0"
   }
 }
