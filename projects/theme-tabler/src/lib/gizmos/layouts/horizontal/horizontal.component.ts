@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DxContext } from '@dashbox/common';
+import { DxContext, DxMenuConfig } from '@dashbox/common';
 import { DxContextService } from '@dashbox/core';
 import { DxGizmo } from '@dashbox/core';
 import { takeUntil } from 'rxjs';
@@ -20,6 +20,8 @@ import { BaseComponent } from '../../../core/base.component';
 export class LayoutHorizontalComponent extends BaseComponent implements OnInit {
   context?: DxContext;
 
+  menu?: DxMenuConfig;
+
   constructor(private readonly contextService: DxContextService) {
     super();
   }
@@ -27,6 +29,15 @@ export class LayoutHorizontalComponent extends BaseComponent implements OnInit {
   public ngOnInit(): void {
     this.contextService.context$
       .pipe(takeUntil(this.destroyed$))
-      .subscribe((context: DxContext) => (this.context = context));
+      .subscribe((context: DxContext) => {
+        this.context = context;
+
+        // Find menu
+        if (context.app?.menus) {
+          this.menu = context.app.menus.find((menu) => menu.themeLocation === 'main');
+        } else {
+          this.menu = undefined;
+        }
+      });
   }
 }

@@ -1,4 +1,18 @@
 {
+    "options": {
+        "basic": {
+            "title": "Basic",
+            "logoPath": "Logo Path",
+            "displayProjectName": "Display project name?",
+            "displayProjectDescription": "Display project description?"
+        }
+    },
+    "menusLocations": {
+        "main": {
+            "title": "Main Menu",
+            "description": "Main navigation menu"
+        }
+    },
     "gizmos": {
         "button": {
             "name": "Button",
@@ -73,7 +87,9 @@
         "yellow": "Yellow",
         "lime": "Lime",
         "teal": "Teal",
-        "cyan": "Cyan"
+        "cyan": "Cyan",
+        "light": "Light",
+        "dark": "Dark"
     },
     "states": {
         "info": "Info",

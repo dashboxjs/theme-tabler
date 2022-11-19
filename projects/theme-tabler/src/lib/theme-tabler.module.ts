@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { DxOptionSwitchDefinition, DxOptionTextDefinition } from '@dashbox/common';
 import { DxCommonModule } from '@dashbox/core';
 import { DxTheme } from '@dashbox/core';
 import { TranslateModule } from '@ngx-translate/core';
@@ -42,6 +43,38 @@ const gizmos = [
   name: 'Tabler',
   version: '1.0.0',
   container: ContainerComponent,
+  menusLocations: [
+    {
+      key: 'main',
+      nameTranslation: '@theme.menusLocations.main.title',
+      descriptionTranslation: '@theme.menusLocations.main.description'
+    }
+  ],
   gizmos,
+  options: [
+    {
+      nameTranslation: "@theme.options.basic.title",
+      options: [
+        <DxOptionTextDefinition> {
+          type: "text",
+          key: "logoPath",
+          defaultValue: "/assets/images/logo.svg",
+          nameTranslation: "@theme.options.basic.logoPath"
+        },
+        <DxOptionSwitchDefinition> {
+          type: "switch",
+          key: "displayProjectName",
+          defaultValue: true,
+          nameTranslation: "@theme.options.basic.displayProjectName"
+        },
+        <DxOptionSwitchDefinition> {
+          type: "switch",
+          key: "displayProjectDescription",
+          defaultValue: true,
+          nameTranslation: "@theme.options.basic.displayProjectDescription"
+        }
+      ]
+    }
+  ]
 })
 export class DxThemeTablerModule {}

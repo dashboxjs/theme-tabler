@@ -7,6 +7,8 @@ export interface ButtonConfig {
   shape: typeof BUTTON_SHAPES[number];
 }
 
+export const BUTTON_COLORS = [...BASE_COLORS, 'light', 'dark'] as const;
+
 export const BUTTON_TYPES = ['btn', 'btn-outline', 'btn-ghost'] as const;
 
 export const BUTTON_SHAPES = ['standard', 'square', 'pill'] as const;

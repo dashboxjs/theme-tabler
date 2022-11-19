@@ -6,8 +6,7 @@ import {
 } from '@dashbox/common';
 import { DxGizmo } from '@dashbox/core';
 
-import { BASE_COLORS } from '../../../data/colors.data';
-import { BUTTON_SHAPES, BUTTON_TYPES, ButtonConfig } from './button.interfaces';
+import { BUTTON_SHAPES, BUTTON_TYPES, ButtonConfig, BUTTON_COLORS } from './button.interfaces';
 
 const TRANSLATION = '@theme.gizmos.button';
 
@@ -32,7 +31,6 @@ const TRANSLATION = '@theme.gizmos.button';
           type: 'text',
           nameTranslation: `${TRANSLATION}.options.label`,
           defaultValue: 'Button',
-          overridable: true,
         },
       ],
     },
@@ -44,8 +42,7 @@ const TRANSLATION = '@theme.gizmos.button';
           type: 'select',
           nameTranslation: `${TRANSLATION}.options.color`,
           defaultValue: 'blue',
-          overridable: true,
-          values: BASE_COLORS.map((color) => ({
+          values: BUTTON_COLORS.map((color) => ({
             value: color,
             labelTranslation: `@theme.colors.${color}`,
           })),

@@ -32,7 +32,6 @@ const TRANSLATION = '@theme.gizmos.text';
           type: 'markdown',
           nameTranslation: `${TRANSLATION}.options.text`,
           defaultValue: 'Text',
-          overridable: true,
           required: true,
         },
       ],
@@ -45,7 +44,6 @@ const TRANSLATION = '@theme.gizmos.text';
           type: 'select',
           nameTranslation: `${TRANSLATION}.options.color`,
           defaultValue: 'none',
-          overridable: true,
           required: true,
           values: ['none', ...BASE_COLORS].map((color) => ({
             value: color,

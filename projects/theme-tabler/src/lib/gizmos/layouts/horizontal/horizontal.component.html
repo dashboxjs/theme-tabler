@@ -2,11 +2,41 @@
     <header class="navbar navbar-expand-md navbar-light d-print-none">
         <div class="container-xl">
             <div>
-                <strong>{{ context?.app?.name }}</strong>
-                <span>&nbsp;&nbsp;&nbsp;&nbsp;{{ context?.app?.description }}</span>
+                <img
+                *ngIf="context?.app?.theme?.['logoPath']"
+                [src]="context?.app?.theme?.['logoPath']"
+                [alt]="(context?.app?.name ?? '') + ' logo'"
+                class="logo" />
+                <strong *ngIf="context?.app?.theme?.['displayProjectName']" class="title">{{ context?.app?.name }}</strong>
+                <span *ngIf="context?.app?.theme?.['displayProjectDescription']">{{ context?.app?.description }}</span>
             </div>
         </div>
     </header>
+    
+    <div *ngIf="menu" class="navbar-expand-md">
+        <div class="collapse navbar-collapse" id="navbar-menu">
+            <div class="navbar navbar-light">
+                <div class="container-xl">
+                    <ul class="navbar-nav">
+                        <li *ngFor="let item of menu.items" class="nav-item">
+                            <a
+                                class="nav-link"
+                                [routerLink]="item.path"
+                                [target]="item.openInNewTab ? '_blank' : '_self'">
+                                <span *ngIf="item.icon" class="nav-link-icon d-md-none d-lg-inline-block">
+                                    <i-tabler [name]="item.icon"></i-tabler>
+                                </span>
+                                <span class="nav-link-title">
+                                    {{ item.name }}
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <div class="page-wrapper">
         <div class="container-xl">
             <router-outlet></router-outlet>
